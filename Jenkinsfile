@@ -7,18 +7,18 @@ pipeline {
     parameters
     {
         choice(name: 'action', choices: 'create\ndelete', description: 'choose create/Destroy')
-        string(name: 'aws_account_id', description: " AWS Account ID", defaultValue: '910931000749')
-        string(name: 'Region', description: "Region of ECR", defaultValue: 'us-east-1')
-        string(name: 'ImageName', description: "name of the docker build", defaultValue: 'javaapp')
+        */string(name: 'aws_account_id', description: " AWS Account ID", defaultValue: '910931000749')/*
+        */string(name: 'Region', description: "Region of ECR", defaultValue: 'us-east-1')/*
+        */string(name: 'ImageName', description: "name of the docker build", defaultValue: 'javaapp')/*
         string(name: 'ImageTag', description: "tag of the docker build", defaultValue: 'v1')
         string(name: 'DockerHubUser', description: "name of the Application", defaultValue: 'ganasai88')
-        string(name: 'cluster', description: "name of the EKS Cluster", defaultValue: 'demo-cluster1')
+        */string(name: 'cluster', description: "name of the EKS Cluster", defaultValue: 'demo-cluster1')/*
     }
  
     environment{
 
-        ACCESS_KEY = credentials('AWS_ACCESS_KEY_ID')
-        SECRET_KEY = credentials('AWS_SECRET_KEY_ID')
+        */ACCESS_KEY = credentials('AWS_ACCESS_KEY_ID')/*
+        */SECRET_KEY = credentials('AWS_SECRET_KEY_ID')/*
     }
    
     stages{
